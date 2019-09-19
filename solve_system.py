@@ -91,7 +91,9 @@ def getMatrix(l):
     lp, maxLen = _getStrings(l, True)
     ls = []
     formatStr = "{: >" + str(maxLen) + "}  "
-    s = formatStr * len(lp) + "| " + formatStr * (len(lp[0]) - len(lp))
+    print(len(lp))
+    print(len(lp[0]))
+    s = formatStr * (len(lp[0]) - 1) + "| " + formatStr
     for r in range(len(l)):
         ls.append(s.format(*lp[r]))
     return "\n".join(ls)
